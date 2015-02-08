@@ -1,0 +1,131 @@
+@import "compass";
+@import "helvetica";
+
+// variables
+$fb-blue: #4A66A0;
+$light-color: #CCC;
+
+.fb-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#top-nav {
+    .fb-container {
+        background-color: $fb-blue;
+        margin: 0 auto;
+        padding: 5px 10px;
+        border-radius: 0 0 3px 3px;
+        overflow: hidden; // clearing float
+    }
+    .brand {
+        float: left;
+        a {
+            color: #fff;
+            font-size: 24px;
+            @include helvetica-medium;
+            font-weight: 500;
+            &:hover,&:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#day {
+    margin-top: 30px;
+}
+
+.calendar-events {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    .timeline {
+        float: left;
+    }
+
+    .timeline {
+        width: 100px;
+        height: 750px;
+        li {
+            text-align: right;
+            height: 30px;
+        }
+        span.meridiem {
+            font-size: 10px;
+            @include helvetica-regular;
+            color: $light-color;
+        }
+
+        li:nth-child(2n+2) {
+            @include helvetica-regular;
+            font-size: 13px;
+            color: $light-color;
+        }
+        li:nth-child(2n+1) {
+            span.time {
+                color: #777;
+                font-size: 15px;
+                @include helvetica-regular;
+            }
+        }
+        margin-right: 10px;
+    }
+
+
+}
+
+#events-list {
+    border: 1px solid $light-color;
+    background-color: #E9E9E9;
+    height: 720px;
+    width: 620px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    float: left;
+
+    .events {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .event {
+            background-color: #fff;
+            z-index: 1;
+            border-top: 1px solid $light-color;
+            border-bottom: 1px solid $light-color;
+            border-right: 1px solid $light-color;
+            position: absolute;
+            overflow: hidden;
+            .wrap {
+                border-left: 5px solid $fb-blue;
+                padding: 5px;
+                width: 100%;
+                height: 100%;
+
+                .title {
+                    @include helvetica-medium;
+                    font-size: 13px;
+                    color: $fb-blue;
+                }
+                .location {
+                    @include helvetica-regular;
+                    font-size: 11px;
+                    color: $light-color;
+                }
+            }
+        }
+    }
+}
+
+#intervals-input {
+    float: right;
+    width: 400px;
+    textarea {
+        width: 100%;
+        height: 620px;
+    }
+}
