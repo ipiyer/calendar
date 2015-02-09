@@ -6,9 +6,11 @@ $fb-blue: #4A66A0;
 $light-color: #CCC;
 
 .fb-container {
-    width: 95%;
+    min-width: 1170px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    overflow: visible;
 }
 
 #top-nav {
@@ -124,6 +126,8 @@ $light-color: #CCC;
 #intervals-input {
     float: right;
     width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
     textarea {
         width: 100%;
         height: 620px;

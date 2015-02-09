@@ -1,7 +1,9 @@
 .fb-container {
-  width: 95%;
+  min-width: 1170px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  overflow: visible;
 }
 
 #top-nav .fb-container {
@@ -110,6 +112,8 @@
 #intervals-input {
   float: right;
   width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 #intervals-input textarea {
   width: 100%;
