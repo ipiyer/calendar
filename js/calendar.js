@@ -64,19 +64,7 @@ $(function() {
         }
     });
 
-    // var data = [{
-    //     "start": 0,
-    //     "end": 150
-    // }, {
-    //     "start": 540,
-    //     "end": 600
-    // }, {
-    //     "start": 560,
-    //     "end": 620
-    // }, {
-    //     "start": 610,
-    //     "end": 670
-    // }];
+
 
     var data = [{
         "id": 1,
@@ -139,5 +127,23 @@ $(function() {
     });
 
     var app = new appView();
-    app.getData(data);
+
+    window.layOutDay = function(events) {
+        app.getData(events);
+    }
+
+    window.layOutDay([{
+        "start": 0,
+        "end": 150
+    }, {
+        "start": 540,
+        "end": 600
+    }, {
+        "start": 560,
+        "end": 620
+    }, {
+        "start": 610,
+        "end": 670
+    }]);
+
 });
