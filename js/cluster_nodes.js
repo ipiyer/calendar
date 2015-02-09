@@ -41,7 +41,7 @@
 
         // Find overlapping events and add it to children attribute
         function findOverlappingEvent(event) {
-            event.children = iTree.rangeSearch(event.start, event.end);
+            event.children = iTree.rangeSearch(event.start + 1, event.end - 1);
             return event;
         }
 
@@ -107,7 +107,7 @@
             var width;
 
             // There are already some events in the level
-            if (overLappingEvents.length > 1 && renderedEvents.length) {
+            if (overLappingEvents.length && renderedEvents.length) {
                 width = Math.floor((totalWidth - renderedWidth) / (overLappingEvents.length - renderedEvents.length));
 
             } else {
